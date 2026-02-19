@@ -1,169 +1,661 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Velvet Hotel Sitamau</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velvet Hotel | Luxury Stay in Sitamau, Madhya Pradesh</title>
+  <meta name="description" content="Book luxury rooms at Velvet Hotel, Sitamau, Madhya Pradesh. Premium stays with WiFi, Parking, AC, CCTV, Hot Water and instant WhatsApp booking." />
+  <meta name="keywords" content="Velvet Hotel, Sitamau hotel, hotel booking Sitamau, luxury hotel Madhya Pradesh, WhatsApp hotel booking" />
+  <meta name="author" content="Velvet Hotel" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Velvet Hotel - Luxury Stay in Sitamau" />
+  <meta property="og:description" content="Modern black & gold luxury hotel website with instant WhatsApp booking." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="theme-color" content="#0e0e0e" />
+  <link rel="canonical" href="https://example.com/velvet.html" />
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --bg-soft: #141414;
+      --card: #1c1c1c;
+      --gold: #d4af37;
+      --gold-soft: #f4dc93;
+      --text: #f8f8f8;
+      --muted: #c2c2c2;
+      --radius: 14px;
+    }
 
-<style>
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
 
-/* HEADER */
-header{
-    background:#111;
-    color:white;
-    padding:15px;
-    text-align:center;
-    font-size:26px;
-    font-weight:bold;
-}
 
-/* HERO */
-.hero{
-    background:url('https://images.unsplash.com/photo-1566073771259-6a8506099945') center/cover;
-    height:420px;
-    color:white;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(212, 175, 55, 0.18), transparent 36%),
+        radial-gradient(circle at 85% 30%, rgba(212, 175, 55, 0.12), transparent 32%),
+        linear-gradient(180deg, #050505, #121212 48%, #0a0a0a);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-.hero h1{
-    font-size:40px;
-    margin:0;
-    background:rgba(0,0,0,0.5);
-    padding:10px 20px;
-    border-radius:10px;
-}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-.hero p{
-    background:rgba(0,0,0,0.5);
-    padding:8px 15px;
-    border-radius:10px;
-}
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
 
-/* BUTTONS */
-.buttons a{
-    display:inline-block;
-    margin:8px;
-    padding:12px 20px;
-    border-radius:8px;
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
-}
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(7, 7, 7, 0.95);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      backdrop-filter: blur(6px);
+    }
 
-.call{ background:#2c7a7b; }
-.whatsapp{ background:#25D366; }
-.direction{ background:#e63946; }
 
-/* SECTION */
-section{
-    padding:40px 20px;
-    text-align:center;
-}
+    .nav-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 0;
+      gap: 10px;
+    }
 
-.rooms{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-}
 
-.room{
-    width:280px;
-    border:1px solid #ddd;
-    margin:15px;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 3px 10px rgba(0,0,0,0.2);
-}
+    .brand {
+      text-align: center;
+      font-size: clamp(1.5rem, 3.6vw, 2.4rem);
+      letter-spacing: 2px;
+      font-weight: 800;
+      color: var(--gold-soft);
+      text-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+    }
 
-.room img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-}
 
-.room h3{
-    margin:10px 0 5px;
-}
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+    }
 
-.price{
-    color:#e63946;
-    font-weight:bold;
-    margin-bottom:10px;
-}
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.92rem;
+      opacity: 0.9;
+    }
 
-/* FOOTER */
-footer{
-    background:#111;
-    color:white;
-    padding:20px;
-    text-align:center;
-}
-</style>
+    nav a:hover {
+      color: var(--gold-soft);
+    }
 
+
+    .hero {
+      min-height: 82vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.76)),
+        url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1900&q=80") center/cover no-repeat;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 100px 0;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.26);
+    }
+
+
+
+    .hero-content {
+      background: rgba(8, 8, 8, 0.48);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 18px;
+      padding: 26px 22px;
+      backdrop-filter: blur(2px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4.7rem);
+      margin-bottom: 8px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+
+    .hero p {
+      color: #f0f0f0;
+      margin-bottom: 20px;
+      font-size: 1.12rem;
+    }
+
+    .btn,
+    button {
+      background: linear-gradient(135deg, #b88d12, #f0cc63);
+      color: #101010;
+      border: none;
+      border-radius: 999px;
+      padding: 11px 18px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover,
+    button:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    section {
+      padding: 58px 0;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      color: var(--gold-soft);
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .sub {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      background: var(--bg-soft);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      padding: 16px;
+      border-radius: var(--radius);
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      background: #0f0f0f;
+      color: var(--text);
+      border: 1px solid #343434;
+      padding: 10px;
+      border-radius: 8px;
+      font: inherit;
+    }
+
+    .rooms,
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .card-body {
+      padding: 14px;
+    }
+
+    .price {
+      color: var(--gold-soft);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .amenities {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+      gap: 12px;
+    }
+
+    .amenity {
+      background: var(--card);
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      text-align: center;
+      border-radius: 12px;
+      padding: 14px 10px;
+    }
+
+    .amenity span {
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 7px;
+    }
+
+    .nearby,
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+    }
+
+    .chip,
+    .review {
+      padding: 14px;
+      border-radius: 12px;
+      background: var(--card);
+      border: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    iframe {
+      width: 100%;
+      border: 0;
+      border-radius: 14px;
+      min-height: 220px;
+      height: 220px;
+    }
+
+    .map-panel {
+      width: min(760px, 100%);
+      margin: 0 auto;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: #25d366;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 700;
+      z-index: 999;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+    }
+
+    .admin-panel {
+      background: #121212;
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+
+    .admin-panel details > summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--gold-soft);
+      margin-bottom: 10px;
+    }
+
+    .admin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(212, 175, 55, 0.22);
+      background: #080808;
+      color: #ddd;
+      text-align: center;
+      padding: 18px 0;
+      margin-top: 30px;
+    }
+
+    .tiny {
+      font-size: 0.85rem;
+      color: #bbb;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 640px) {
+
+      .nav-wrap {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav {
+        justify-content: center;
+      }
+      .whatsapp-float {
+        right: 10px;
+        bottom: 10px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "Velvet Hotel",
+      "description": "Luxury hotel in Sitamau, Madhya Pradesh with AC rooms, WiFi, parking, CCTV and hot water.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sitamau",
+        "addressRegion": "Madhya Pradesh",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91XXXXXXXXXX",
+      "amenityFeature": [
+        {"@type": "LocationFeatureSpecification", "name": "WiFi", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Parking", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "CCTV", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Hot Water", "value": true}
+      ]
+    }
+  </script>
 </head>
-
 <body>
+  <header class="sticky-nav">
+    <div class="container nav-wrap">
+      <div class="brand">VELVET HOTEL • SITAMAU</div>
+      <nav>
+        <a href="#booking">Booking</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#nearby">Nearby</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#map">Map</a>
+        <a href="#admin">Admin</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-VELVET HOTEL – SITAMAU
-</header>
+  <section class="hero">
 
-<div class="hero">
-<h1>Welcome to Velvet Hotel</h1>
-<p>Clean Rooms | AC & Non AC | Family Stay</p>
+    <div class="container hero-content">
+      <h1>Velvet Hotel</h1>
+      <p>Luxury Stay in Sitamau, Madhya Pradesh • Elegant Rooms • Family-Friendly</p>
+      <div class="hero-buttons">
+        <a class="btn" href="#booking">Book Now</a>
+        <a class="btn" id="heroWhatsAppBtn" href="#">WhatsApp Booking</a>
+      </div>
+    </div>
+  </section>
 
-<div class="buttons">
-<a class="call" href="tel:+91XXXXXXXXXX">📞 Call Now</a>
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX?text=Hello%20I%20want%20to%20book%20a%20room%20in%20Velvet%20Hotel" target="_blank">🛏️ Book on WhatsApp</a>
-<a class="direction" href="https://maps.app.goo.gl/k3gpsFTYp4aH2uSt8" target="_blank">🧭 Get Direction</a>
-</div>
-</div>
+  <section id="booking">
+    <div class="container">
+      <h2>Book Your Stay</h2>
+      <p class="sub">Fill details and send booking request directly to WhatsApp.</p>
+      <form id="bookingForm" class="booking-grid">
+        <input id="guestName" required placeholder="Guest Name" />
+        <input id="guestPhone" required placeholder="Phone Number" />
+        <input id="checkIn" type="date" required />
+        <input id="checkOut" type="date" required />
+        <select id="roomType" required>
+          <option value="">Select Room Type</option>
+          <option>Deluxe AC Room</option>
+          <option>Executive Suite</option>
+          <option>Standard Room</option>
+        </select>
+        <button type="submit">Send Booking to WhatsApp</button>
+      </form>
+      <p class="tiny" id="contactDisplay"></p>
+    </div>
+  </section>
 
-<section>
-<h2>Our Rooms</h2>
+  <section id="rooms">
+    <div class="container">
+      <h2>Room Listing</h2>
+      <div id="roomsContainer" class="rooms"></div>
+    </div>
+  </section>
 
-<div class="rooms">
+  <section id="amenities">
+    <div class="container">
+      <h2>Amenities</h2>
+      <div class="amenities">
+        <div class="amenity"><span>📶</span>Free WiFi</div>
+        <div class="amenity"><span>🅿️</span>Parking</div>
+        <div class="amenity"><span>❄️</span>AC</div>
+        <div class="amenity"><span>📹</span>CCTV Security</div>
+        <div class="amenity"><span>🚿</span>24x7 Hot Water</div>
+      </div>
+    </div>
+  </section>
 
-<div class="room">
-<img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32">
-<h3>Deluxe AC Room</h3>
-<p class="price">₹1200 / Night</p>
-<p>King Size Bed, TV, Attached Bathroom, Hot Water, Free WiFi</p>
-</div>
+  <section id="gallery">
+    <div class="container">
+      <h2>Image Gallery</h2>
+      <div id="galleryContainer" class="gallery"></div>
+    </div>
+  </section>
 
-<div class="room">
-<img src="https://images.unsplash.com/photo-1590490360182-c33d57733427">
-<h3>Standard Room</h3>
-<p class="price">₹800 / Night</p>
-<p>Clean Bed, Fan, Attached Bathroom, 24h Water</p>
-</div>
+  <section id="nearby">
+    <div class="container">
+      <h2>Nearby Places</h2>
+      <div class="nearby">
+        <div class="chip">🚌 Sitamau Bus Stand - 1.2 km</div>
+        <div class="chip">🚉 Mandsaur Railway Station - 28 km</div>
+        <div class="chip">🛍️ Main Market Sitamau - 0.8 km</div>
+        <div class="chip">🛕 Ancient Temple - 2.4 km</div>
+      </div>
+    </div>
+  </section>
 
-</div>
-</section>
+  <section id="reviews">
+    <div class="container">
+      <h2>Customer Reviews</h2>
+      <div class="reviews">
+        <div class="review">★★★★★<br />"Beautiful interiors and very clean rooms." - Rahul S.</div>
+        <div class="review">★★★★★<br />"Best stay option in Sitamau with great service." - Pooja M.</div>
+        <div class="review">★★★★☆<br />"Quick check-in, family friendly and safe." - Imran K.</div>
+      </div>
+    </div>
+  </section>
 
-<section>
-<h2>Location</h2>
+  <section id="map">
+    <div class="container">
+      <h2>Find Us on Map</h2>
+      <div class="map-panel"><iframe loading="lazy" src="https://www.google.com/maps?q=Sitamau%20Madhya%20Pradesh&output=embed" title="Velvet Hotel Map"></iframe></div>
+    </div>
+  </section>
 
-<iframe 
-src="https://www.google.com/maps?q=VELVET+HOTEL&output=embed"
-width="100%" height="350" style="border:0;">
-</iframe>
+  <section id="admin">
+    <div class="container">
+      <h2>Admin Panel</h2>
+      <div class="admin-panel">
+        <details>
+          <summary>Manage website content (local admin controls)</summary>
 
-</section>
+          <div class="admin-grid">
+            <select id="priceRoomSelect"></select>
+            <input id="newPriceInput" placeholder="New Price (e.g. 1499)" type="number" min="0" />
+            <button id="updatePriceBtn" type="button">Update Room Price</button>
+          </div>
 
-<footer>
-<p>Velvet Hotel, Sitamau</p>
-<p>24 Hours Reception Available</p>
-</footer>
+          <div class="admin-grid">
+            <input id="newRoomName" placeholder="New Room Name" />
+            <input id="newRoomPrice" placeholder="Room Price" type="number" min="0" />
+            <input id="newRoomImage" placeholder="Room Photo URL" />
+            <textarea id="newRoomDesc" placeholder="Room Description"></textarea>
+            <button id="addRoomBtn" type="button">Add New Room</button>
+          </div>
 
+          <div class="admin-grid">
+            <input id="newContactNumber" placeholder="Update WhatsApp Number (e.g. 919999999999)" />
+            <button id="updateContactBtn" type="button">Update Contact Number</button>
+          </div>
+
+          <p class="tiny">Admin changes are stored in browser localStorage for simple hosting environments.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <a id="floatingWhatsApp" class="whatsapp-float" href="#" aria-label="Book on WhatsApp">WhatsApp</a>
+
+  <footer>
+    <div class="container">
+      <p><strong>Velvet Hotel</strong> • Sitamau, Madhya Pradesh, India</p>
+      <p id="footerContact">Contact: +91XXXXXXXXXX</p>
+    </div>
+  </footer>
+
+  <script>
+    const defaults = {
+      contact: "91XXXXXXXXXX",
+      rooms: [
+        {
+          id: "deluxe-ac",
+          name: "Deluxe AC Room",
+          price: 1800,
+          image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=80",
+          description: "King bed, AC, smart TV, hot water, high-speed WiFi."
+        },
+        {
+          id: "executive-suite",
+          name: "Executive Suite",
+          price: 2600,
+          image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1000&q=80",
+          description: "Luxury suite with lounge space, premium bedding and minibar."
+        },
+        {
+          id: "standard-room",
+          name: "Standard Room",
+          price: 1200,
+          image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80",
+          description: "Comfort room with attached bathroom and all essentials."
+        }
+      ]
+    };
+
+    const storageKey = "velvetHotelData";
+    const getData = () => {
+      const saved = localStorage.getItem(storageKey);
+      return saved ? JSON.parse(saved) : JSON.parse(JSON.stringify(defaults));
+    };
+    const saveData = (data) => localStorage.setItem(storageKey, JSON.stringify(data));
+
+    let state = getData();
+
+    const roomsContainer = document.getElementById("roomsContainer");
+    const galleryContainer = document.getElementById("galleryContainer");
+    const priceRoomSelect = document.getElementById("priceRoomSelect");
+    const contactDisplay = document.getElementById("contactDisplay");
+    const footerContact = document.getElementById("footerContact");
+
+    const renderRooms = () => {
+      roomsContainer.innerHTML = state.rooms.map(room => `
+        <article class="card">
+          <img loading="lazy" src="${room.image}" alt="${room.name}" />
+          <div class="card-body">
+            <h3>${room.name}</h3>
+            <p class="price">₹${room.price} / night</p>
+            <p>${room.description}</p>
+          </div>
+        </article>
+      `).join("");
+
+      galleryContainer.innerHTML = state.rooms.map(room => `
+        <div class="card">
+          <img loading="lazy" src="${room.image}" alt="${room.name} photo" />
+        </div>
+      `).join("");
+
+      priceRoomSelect.innerHTML = state.rooms.map(room =>
+        `<option value="${room.id}">${room.name} (₹${room.price})</option>`
+      ).join("");
+    };
+
+    const updateContactUI = () => {
+      const text = `Booking Contact: +${state.contact}`;
+      contactDisplay.textContent = text;
+      footerContact.textContent = `Contact: +${state.contact}`;
+    };
+
+    const getWhatsAppUrl = (message) => `https://wa.me/${state.contact}?text=${encodeURIComponent(message)}`;
+
+    const updateWhatsAppLinks = () => {
+      const baseMessage = "Hello, I want to book a room at Velvet Hotel, Sitamau.";
+      document.getElementById("heroWhatsAppBtn").href = getWhatsAppUrl(baseMessage);
+      document.getElementById("floatingWhatsApp").href = getWhatsAppUrl(baseMessage);
+    };
+
+    document.getElementById("bookingForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("guestName").value.trim();
+      const phone = document.getElementById("guestPhone").value.trim();
+      const checkIn = document.getElementById("checkIn").value;
+      const checkOut = document.getElementById("checkOut").value;
+      const room = document.getElementById("roomType").value;
+
+      const message = `Hotel Booking Request%0AName: ${name}%0APhone: ${phone}%0ACheck-in: ${checkIn}%0ACheck-out: ${checkOut}%0ARoom: ${room}%0AHotel: Velvet Hotel, Sitamau`;
+      window.open(`https://wa.me/${state.contact}?text=${message}`, "_blank");
+    });
+
+    document.getElementById("updatePriceBtn").addEventListener("click", () => {
+      const id = priceRoomSelect.value;
+      const newPrice = Number(document.getElementById("newPriceInput").value);
+      if (!id || !newPrice) return;
+      state.rooms = state.rooms.map(room => room.id === id ? { ...room, price: newPrice } : room);
+      saveData(state);
+      renderRooms();
+      alert("Room price updated.");
+    });
+
+    document.getElementById("addRoomBtn").addEventListener("click", () => {
+      const name = document.getElementById("newRoomName").value.trim();
+      const price = Number(document.getElementById("newRoomPrice").value);
+      const image = document.getElementById("newRoomImage").value.trim();
+      const description = document.getElementById("newRoomDesc").value.trim();
+
+      if (!name || !price || !image || !description) return;
+
+      state.rooms.push({
+        id: `${name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date.now()}`,
+        name,
+        price,
+        image,
+        description
+      });
+      saveData(state);
+      renderRooms();
+      alert("New room added.");
+    });
+
+    document.getElementById("updateContactBtn").addEventListener("click", () => {
+      const number = document.getElementById("newContactNumber").value.trim();
+      if (!number) return;
+      state.contact = number;
+      saveData(state);
+      updateContactUI();
+      updateWhatsAppLinks();
+      alert("Contact number updated.");
+    });
+
+    renderRooms();
+    updateContactUI();
+    updateWhatsAppLinks();
+  </script>
 </body>
 </html>
